@@ -1,5 +1,4 @@
-# Keeping Behavioral Programs Alive: Specifying and Executing Liveness Requirements
-
+# Adding Liveness to Behavioral Programming: Theory, Implementation, and User Study
 This repository contains all code for the following evaluations presented in the paper:
 
 ## Level Crossing
@@ -102,5 +101,30 @@ To run a check of a single pattern run the `check.py`:
 python check.py --pattern 8
 ```
 
+## User Study
+**Note: the project was implemented and tested on Python 3.9.16**
 
+### Installation 
+
+Set a virtual environment to run the code:
+```shell
+cd user_study
+python -m venv env 
+source env/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Usage
+
+To run the computation of code complexity for specific group and task use the `code_complexity.py` script
+(`A` for w/ MF and `B` for w/o MF, `1-5` for the task number):
+```shell
+python code_complexity.py --group A --task 1
+```
+
+To run the statistical tests use the `statistical_tests.py` script:
+```shell
+python statistical_tests.py
+```
 
